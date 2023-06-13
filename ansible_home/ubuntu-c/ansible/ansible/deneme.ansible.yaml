@@ -1,0 +1,11 @@
+---
+- hosts: ubuntu1
+  vars:
+    ahmet: []
+    mehmet: []
+  
+  tasks:
+    - name:
+      ansible.builtin.debug:
+        msg: "{{  ahmet }}"
+      with_items: "{{ [[['1']],[['2']],[['3']]] }}"
